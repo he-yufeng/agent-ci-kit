@@ -115,6 +115,17 @@ agentci tool-fence init                 # write starter fixtures
 agentci tool-fence run tests/toolfence --markdown
 ```
 
+## Roadmap
+
+The five tools are stable and tested; the work now is widening coverage and making the evidence easier to wire into a real pipeline:
+
+- **A ready-made GitHub Action** — a single composite action that runs `mcp-gate` / `tool-fence` on a PR and posts the report as a comment, so adoption is a few lines of YAML instead of a hand-written workflow.
+- **Streamable-HTTP MCP servers** — `mcp-gate` and `mcp-replay` speak stdio today; the HTTP transport is the obvious next surface as more servers ship that way.
+- **Richer CI-log classifiers** — `ci-repro` recognises the common failure shapes (real regression, permission gate, network limit, dependency install, local test); the long tail (flaky-retry markers, OOM kills, cache corruption) is worth teaching it next.
+- **A shared evidence bundle** — let the tools emit one combined, redacted artifact (CI repro + MCP transcript + tool-fence verdict) that a maintainer can read in one place.
+
+Each tool stays usable on its own — the roadmap is about making the suite easier to drop into a pipeline, not adding surface for its own sake. Issues and ideas welcome.
+
 ## Related projects
 
 `agentcikit` sits next to a few other tools I maintain for agent and open-source work:

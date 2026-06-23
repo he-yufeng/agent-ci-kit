@@ -91,6 +91,17 @@ agentci tool-fence init                 # 写出起步 fixture
 agentci tool-fence run tests/toolfence --markdown
 ```
 
+## 后续规划
+
+五个工具本身已经稳定、有测试覆盖，接下来的重点是扩大覆盖面、让产出的证据更容易接进真实流水线：
+
+- **开箱即用的 GitHub Action**：一个 composite action，在 PR 上跑 `mcp-gate` / `tool-fence` 并把报告贴成评论，接入只需几行 YAML，而不是手写整套 workflow。
+- **支持 Streamable-HTTP 的 MCP 服务器**：`mcp-gate` 和 `mcp-replay` 目前走 stdio，随着越来越多服务器改用 HTTP 传输，这是最该补的下一块。
+- **更丰富的 CI 日志分类器**：`ci-repro` 已经能识别常见失败形态（真回归、权限门、网络限制、依赖安装、本地测试失败），接下来值得教它认长尾情况（flaky 重试标记、OOM 被杀、缓存损坏）。
+- **统一的证据包**：让这几个工具能输出一份合并、脱敏后的产物（CI 复现 + MCP transcript + tool-fence 结论），维护者在一个地方就能读完。
+
+每个工具仍然可以单独用，这份规划是为了让整套工具更好地嵌进流水线，而不是为加功能而加功能。欢迎提 issue 和想法。
+
 ## 相关项目
 
 `agentcikit` 和我维护的另外几个 agent / 开源工具放在一起用：
