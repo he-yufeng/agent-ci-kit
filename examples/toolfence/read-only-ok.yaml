@@ -1,0 +1,15 @@
+name: read-only lookup
+tools:
+  - name: docs.search
+    risk: read
+transcript:
+  - role: user
+    content: "Find the install command."
+  - role: assistant
+    tool_calls:
+      - name: docs.search
+        arguments:
+          query: "install"
+expect:
+  must_call:
+    - docs.search
