@@ -1,0 +1,6 @@
+test (ubuntu-latest)	Tests	2026-06-07T08:00:00Z	##[group]Run python -m pytest -q
+test (ubuntu-latest)	Tests	2026-06-07T08:00:01Z	python -m pytest -q
+test (ubuntu-latest)	Tests	2026-06-07T08:00:02Z	tests/test_parser.py::test_parse_windows_log FAILED
+test (ubuntu-latest)	Tests	2026-06-07T08:00:03Z	E   AssertionError: expected one failure
+test (ubuntu-latest)	Tests	2026-06-07T08:00:04Z	##[error]Process completed with exit code 1.
+

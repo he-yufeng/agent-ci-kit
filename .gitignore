@@ -12,4 +12,5 @@ venv/
 .coverage
 htmlcov/
 *.log
+!tests/**/*.log
 .DS_Store

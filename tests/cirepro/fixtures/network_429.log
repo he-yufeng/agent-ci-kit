@@ -1,0 +1,6 @@
+test on 3.10	Tests	2026-06-07T08:00:00Z	##[group]Run uv run pytest tests/test_embeddings.py
+test on 3.10	Tests	2026-06-07T08:00:01Z	uv run pytest tests/test_embeddings.py
+test on 3.10	Tests	2026-06-07T08:00:02Z	httpx.HTTPStatusError: Client error '429 Too Many Requests'
+test on 3.10	Tests	2026-06-07T08:00:03Z	We couldn't connect to 'https://huggingface.co'
+test on 3.10	Tests	2026-06-07T08:00:04Z	##[error]Process completed with exit code 1.
+
