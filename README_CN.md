@@ -104,12 +104,12 @@ agentci tool-fence run tests/toolfence --markdown
 
 ## 相关项目
 
-`agentcikit` 和我维护的另外几个 agent / 开源工具放在一起用：
+agentcikit 把我几个 agent-CI 小工具整合到了一起，下面是跟它最接近的几个：
 
-- [AgentProbe](https://github.com/he-yufeng/AgentProbe) — 回归测试 AI agent 的 pytest 插件（快照、语义比对、mock LLM）。
-- [GitSense](https://github.com/he-yufeng/GitSense) — 找可以上手的开源 issue，评估一个仓库的贡献难度。
-- [RepoWiki](https://github.com/he-yufeng/RepoWiki) — 给任意代码库生成 wiki 文档。
-- [CoreCoder](https://github.com/he-yufeng/CoreCoder) — 一个能从头读到尾的极简 AI coding agent。
+- **[CoreCoder](https://github.com/he-yufeng/CoreCoder)** — 想搞懂一个 coding agent 到底怎么运作？把整套约 1000 行引擎从头读到尾，而不是当黑箱。
+- **[RepoWiki](https://github.com/he-yufeng/RepoWiki)** — 被丢进一个陌生代码库？它给你一份带「从哪读起」路径的 wiki，一个可自托管的 DeepWiki 替代。
+- **[AgentProbe](https://github.com/he-yufeng/AgentProbe)** — 抓住 LLM agent 行为悄悄变样的那一刻：给 agent 做快照测试，跑在 pytest 里。
+- **[LiteBench](https://github.com/he-yufeng/LiteBench)** — 一条命令给任意 LLM 跑基准：内置 HumanEval、GSM8K、MMLU，也能加你自己的任务。
 
 ## 开发
 

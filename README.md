@@ -126,14 +126,14 @@ The five tools are stable and tested; the work now is widening coverage and maki
 
 Each tool stays usable on its own — the roadmap is about making the suite easier to drop into a pipeline, not adding surface for its own sake. Issues and ideas welcome.
 
-## Related projects
+## Related Projects
 
-`agentcikit` sits next to a few other tools I maintain for agent and open-source work:
+agentcikit pulls together a few of my agent-CI tools. The ones closest to it:
 
-- [AgentProbe](https://github.com/he-yufeng/AgentProbe) — pytest plugin for regression-testing AI agents (snapshots, semantic comparison, mock LLMs).
-- [GitSense](https://github.com/he-yufeng/GitSense) — find open-source issues to work on and gauge how hard a repo is to contribute to.
-- [RepoWiki](https://github.com/he-yufeng/RepoWiki) — generate wiki documentation for any codebase.
-- [CoreCoder](https://github.com/he-yufeng/CoreCoder) — a minimal AI coding agent you can read end to end.
+- **[CoreCoder](https://github.com/he-yufeng/CoreCoder)** — want to understand how a coding agent really works? Read the whole ~1k-line engine end to end, not a black box.
+- **[RepoWiki](https://github.com/he-yufeng/RepoWiki)** — dropped into an unfamiliar codebase? It gives you a guided wiki and a where-to-start reading path, a self-hostable DeepWiki alternative.
+- **[AgentProbe](https://github.com/he-yufeng/AgentProbe)** — catch when your LLM agent silently changes behavior: snapshot tests for agents, run in pytest.
+- **[LiteBench](https://github.com/he-yufeng/LiteBench)** — benchmark any LLM in one command: HumanEval, GSM8K and MMLU built in, plus your own tasks.
 
 ## Development
 
